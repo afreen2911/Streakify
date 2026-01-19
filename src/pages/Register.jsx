@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Register = () => {
   return (
@@ -10,6 +11,9 @@ const Register = () => {
         <h2>Password</h2>
         <input type="password" placeholder='Enter Password' className="w-full border p-2 rounded mb-4"/>
         <button className="w-full bg-green-600 text-white py-2 rounded">Create Account</button>
+        <p className="text-sm text-center mt-4">Already have an Account?
+            <Link to="/" className="text-green-600 font-medium">Login</Link>
+        </p>
       </div>
     </div>
   )
