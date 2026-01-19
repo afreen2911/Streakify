@@ -1,15 +1,16 @@
-import { useState } from 'react'
+import React from 'react'
+import Dashboard from './pages/Dashboard'
+import Login from './pages/Login'
+import Register from './pages/Register'
 
-import './App.css'
-
-function App() {
-
+const App = () => {
   return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-bold text-purple-600">
-        Tailwind is LIVE 🚀
-        </h1>
-        </div>
+    <div>
+      
+      <Dashboard/>
+      <Register/>
+      <Login/>
+    </div>
   )
 }
 
