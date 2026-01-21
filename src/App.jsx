@@ -3,20 +3,24 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Dashboard from "./pages/Dashboard"
+import ProtectedRoute from "./routes/ProtectedRoute"
 
-import HabitCard from "./components/HabitCard"
+
 
 const App = () => {
   return (
     <div>
-      <HabitCard/>
       <BrowserRouter>
       <Routes>
         
         <Route path="/" element={<Login/>} />
         <Route path="/register" element={<Register/>} /> 
-        <Route path="/dashboard" element={<Dashboard/>} />
+        <Route path="/dashboard" element={<ProtectedRoute>
+        <Dashboard/>
+      </ProtectedRoute>
+    } />
       </Routes>
+      
       </BrowserRouter>
       
     </div>
